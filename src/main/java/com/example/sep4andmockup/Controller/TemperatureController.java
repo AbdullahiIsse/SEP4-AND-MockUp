@@ -18,8 +18,6 @@ public class TemperatureController {
     TemperatureRepository temperatureRepository;
 
 
-
-
     @GetMapping
     @ResponseStatus(HttpStatus.FOUND)
     public List<Temperature> getTemperature(){

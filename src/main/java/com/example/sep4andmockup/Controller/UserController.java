@@ -32,7 +32,6 @@ public class UserController {
         return users;
     }
 
-
     @GetMapping("/validate/{username}/{password}")
     public ResponseEntity<User> validateUser(@PathVariable("username") String username, @PathVariable("password") String password) {
 
@@ -45,12 +44,6 @@ public class UserController {
         return new ResponseEntity<User>(user, HttpStatus.OK);
 
     }
-
-
-
-
-
-
 
 
 }
