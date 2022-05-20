@@ -13,7 +13,6 @@ public class UserService implements IUserService{
     UserRepository userRepository;
 
 
-
     @Override
     public User validateUser(String username, String password) throws Exception {
 
