@@ -17,17 +17,23 @@ public class Pet {
     private String name;
     private String species;
     private int age;
+    private long terrariumId;
 
 
     public Pet() {
     }
 
 
-    public Pet(String name, String species, int age) {
+    public Pet(String name, String species, int age, long terrariumId) {
         this.name = name;
         this.species = species;
         this.age = age;
+        this.terrariumId = terrariumId;
     }
+
+
+
+
 
     public long getId() {
         return id;
@@ -35,6 +41,14 @@ public class Pet {
 
     public void setId(long id) {
         this.id = id;
+    }
+
+    public long getTerrariumId() {
+        return terrariumId;
+    }
+
+    public void setTerrariumId(long terrariumId) {
+        this.terrariumId = terrariumId;
     }
 
     public String getName() {

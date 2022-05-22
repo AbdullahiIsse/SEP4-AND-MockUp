@@ -1,5 +1,6 @@
 package com.example.sep4andmockup.Controller;
 
+import com.example.sep4andmockup.Entities.Pet;
 import com.example.sep4andmockup.Entities.Terrarium;
 import com.example.sep4andmockup.Repository.TerrariumRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -42,6 +43,12 @@ public class TerrariumController {
     public Terrarium getTerrariumById(@PathVariable("id") long id){
 
         return terrariumRepository.findById(id).get();
+    }
+
+    @PostMapping
+    @ResponseStatus(HttpStatus.OK)
+    public Terrarium addTerrarium(@RequestBody Terrarium terrarium){
+        return terrariumRepository.save(terrarium);
     }
 
 
