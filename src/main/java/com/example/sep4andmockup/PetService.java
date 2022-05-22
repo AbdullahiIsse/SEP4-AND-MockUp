@@ -12,4 +12,6 @@ public interface PetService {
 
     void deletePet(long id);
 
+    List<Pet> findAll();
+
 }

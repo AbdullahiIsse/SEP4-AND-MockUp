@@ -28,4 +28,11 @@ public class PetServiceImpl implements PetService{
     public void deletePet(long id) {
         petRepository.deleteById(id);
     }
+
+
+
+    public List<Pet> findAll() {
+
+        return petRepository.findAll();
+    }
 }

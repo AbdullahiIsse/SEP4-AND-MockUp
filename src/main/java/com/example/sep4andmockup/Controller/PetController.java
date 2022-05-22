@@ -78,4 +78,14 @@ public class PetController {
 
 
 
+    @GetMapping
+    @ResponseStatus(HttpStatus.FOUND)
+    public List<Pet> getAllPets() {
+
+        return petService.findAll();
+    }
+
+
+
+
 }
