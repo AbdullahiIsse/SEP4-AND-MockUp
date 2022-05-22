@@ -23,4 +23,9 @@ public class PetServiceImpl implements PetService{
     public List<Pet> findByTerrariumId(long id) {
         return petRepository.findByTerrariumId(id);
     }
+
+    @Override
+    public void deletePet(long id) {
+        petRepository.deleteById(id);
+    }
 }

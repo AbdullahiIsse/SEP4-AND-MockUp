@@ -34,5 +34,12 @@ public class PetController {
         return petService.addPet(p);
     }
 
+    @DeleteMapping("/{id}")
+    @ResponseStatus(HttpStatus.OK)
+    public void deletePet(@PathVariable("id") long id){
+        petService.deletePet(id);
+    }
+
+
 
 }

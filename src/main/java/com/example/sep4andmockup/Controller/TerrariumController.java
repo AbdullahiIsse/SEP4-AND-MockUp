@@ -51,6 +51,12 @@ public class TerrariumController {
         return terrariumRepository.save(terrarium);
     }
 
+    @DeleteMapping("/{id}")
+    @ResponseStatus(HttpStatus.OK)
+    public void deleteTerrarium(@PathVariable("id") long id){
+        terrariumRepository.deleteById(id);
+    }
+
 
 
 

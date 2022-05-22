@@ -10,4 +10,6 @@ public interface PetService {
 
     List<Pet> findByTerrariumId(long id);
 
+    void deletePet(long id);
+
 }
