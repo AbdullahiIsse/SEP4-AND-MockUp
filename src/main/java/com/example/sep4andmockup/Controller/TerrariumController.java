@@ -57,6 +57,20 @@ public class TerrariumController {
         terrariumRepository.deleteById(id);
     }
 
+    @PatchMapping("/{id}")
+    public Terrarium UpdateTerrariumByTerrariumId(@RequestBody Terrarium terrarium,@PathVariable("id") long id){
+
+        Terrarium terrarium1 = terrariumRepository.findById(id).get();
+
+       if (terrarium.getTerrariumName() != null){
+           terrarium1.setTerrariumName(terrarium.getTerrariumName());
+       }
+
+        return terrariumRepository.save(terrarium1);
+
+    }
+
+
 
 
 
