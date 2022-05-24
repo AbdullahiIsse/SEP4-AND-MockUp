@@ -1,5 +1,6 @@
 package com.example.sep4andmockup.Controller;
 
+import com.example.sep4andmockup.Entities.Terrarium;
 import com.example.sep4andmockup.Entities.User;
 import com.example.sep4andmockup.Repository.UserRepository;
 import com.example.sep4andmockup.UserService;
@@ -43,6 +44,12 @@ public class UserController {
         }
         return new ResponseEntity<User>(user, HttpStatus.OK);
 
+    }
+
+    @PostMapping
+    @ResponseStatus(HttpStatus.OK)
+    public User addUser(@RequestBody User user){
+        return userRepository.save(user);
     }
 
 

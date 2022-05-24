@@ -33,7 +33,7 @@ public class TerrariumController {
 
     @GetMapping("/user/{id}")
     @ResponseStatus(HttpStatus.OK)
-    public List<Terrarium> getTerrariumByUserId(@PathVariable("id") long id){
+    public List<Terrarium> getTerrariumByUserId(@PathVariable("id") String id){
 
         return terrariumRepository.getTerrariumByUserId(id);
     }

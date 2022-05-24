@@ -9,28 +9,26 @@ public class User {
 
     @Id
     @Column(name = "user_id")
-    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "user_generator")
-    @SequenceGenerator(name = "user_generator", sequenceName = "user_accounts_seq", allocationSize = 1)
-    private long id;
+    private String id;
     private String username;
-    private String password;
+    private String email;
 
 
     public User() {
 
     }
 
-    public User(String username, String password) {
+    public User(String id, String username, String email) {
+        this.id = id;
         this.username = username;
-        this.password = password;
-
+        this.email = email;
     }
 
-    public long getId() {
+    public String getId() {
         return id;
     }
 
-    public void setId(long id) {
+    public void setId(String id) {
         this.id = id;
     }
 
@@ -42,12 +40,12 @@ public class User {
         this.username = username;
     }
 
-    public String getPassword() {
-        return password;
+    public String getEmail() {
+        return email;
     }
 
-    public void setPassword(String password) {
-        this.password = password;
+    public void setEmail(String email) {
+        this.email = email;
     }
 
 
@@ -56,7 +54,7 @@ public class User {
         return "User{" +
                 "id=" + id +
                 ", username='" + username + '\'' +
-                ", password='" + password + '\'' +
+                ", password='" + email + '\'' +
                 '}';
     }
 }

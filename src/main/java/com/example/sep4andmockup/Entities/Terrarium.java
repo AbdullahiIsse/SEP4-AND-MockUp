@@ -12,14 +12,14 @@ public class Terrarium {
     @SequenceGenerator(name = "terrarium_generator", sequenceName = "terrarium_seq", allocationSize = 1)
     private long id;
     private String terrariumName;
-    private long userId;
+    private String userId;
 
     public Terrarium() {
 
     }
 
 
-    public Terrarium(String terrariumName, long userId) {
+    public Terrarium(String terrariumName, String userId) {
         this.terrariumName = terrariumName;
         this.userId = userId;
     }
@@ -41,11 +41,11 @@ public class Terrarium {
         this.terrariumName = terrariumName;
     }
 
-    public long getUserId() {
+    public String getUserId() {
         return userId;
     }
 
-    public void setUserId(long userId) {
+    public void setUserId(String userId) {
         this.userId = userId;
     }
 

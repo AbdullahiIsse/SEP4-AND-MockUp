@@ -12,6 +12,12 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
+
+
+
+
+
+
 @RestController
 @RequestMapping("/pet")
 public class PetController {
@@ -78,12 +84,6 @@ public class PetController {
 
 
 
-    @GetMapping
-    @ResponseStatus(HttpStatus.FOUND)
-    public List<Pet> getAllPets() {
-
-        return petService.findAll();
-    }
 
 
 

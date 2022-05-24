@@ -12,7 +12,7 @@ public interface TerrariumRepository extends CrudRepository<Terrarium,Long> {
     @Override
     public List<Terrarium> findAll();
 
-    List<Terrarium>getTerrariumByUserId(long id);
+    List<Terrarium>getTerrariumByUserId(String id);
 
 
 
