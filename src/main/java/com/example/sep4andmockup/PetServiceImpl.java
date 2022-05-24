@@ -31,8 +31,4 @@ public class PetServiceImpl implements PetService{
 
 
 
-    public List<Pet> findAll() {
-
-        return petRepository.findAll();
-    }
 }

@@ -8,8 +8,6 @@ import java.util.List;
 
 public interface PetRepository extends CrudRepository<Pet,Long> {
 
-    List<Pet> findAll();
-
 
 
     List<Pet> findByTerrariumId(long id);

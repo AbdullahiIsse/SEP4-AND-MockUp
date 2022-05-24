@@ -29,7 +29,6 @@ public class PetController {
     PetRepository petRepository;
 
 
-
     @GetMapping
     @ResponseStatus(HttpStatus.OK)
     public List<Pet> getPets(){

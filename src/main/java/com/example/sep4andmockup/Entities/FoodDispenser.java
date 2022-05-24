@@ -4,13 +4,13 @@ package com.example.sep4andmockup.Entities;
 import javax.persistence.*;
 
 @Entity
-@Table(name = "foodDispenser")
+@Table(name = "fooddispenser")
 public class FoodDispenser {
 
     @Id
     @Column(name = "food_id")
-    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "foodDispenser_generator")
-    @SequenceGenerator(name = "foodDispenser_generator", sequenceName = "fooddispenser_seq", allocationSize = 1)
+    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "fooddispenser_generator")
+    @SequenceGenerator(name = "fooddispenser_generator", sequenceName = "fooddispenser_seq", allocationSize = 1)
     private long id;
     private int food;
     private long terrariumId;

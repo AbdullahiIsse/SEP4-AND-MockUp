@@ -12,7 +12,7 @@ import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
-@RequestMapping("/food")
+@RequestMapping("/fooddispenser")
 public class FoodDispenserController {
 
 
@@ -21,7 +21,6 @@ public class FoodDispenserController {
 
     @Autowired
     FoodDispenserRepository foodDispenserRepository;
-
 
 
     @PostMapping
